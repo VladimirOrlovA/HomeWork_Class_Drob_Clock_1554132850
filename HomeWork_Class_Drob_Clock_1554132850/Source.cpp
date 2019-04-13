@@ -12,8 +12,8 @@ private:
 public:
 	Drob(int a = 0, int b = 0)	// конструктор
 	{
-		numerator = new int;
-		denominator = new int;
+		this->numerator = new int;
+		this->denominator = new int;
 	}
 
 	void setNomDenom(int a, int b)	// сеттер
@@ -27,12 +27,12 @@ public:
 		*denominator = b;
 	}
 
-	int getNom()	// геттер
+	int getNom() const	// геттер
 	{
 		return *numerator;
 	}
 
-	int getDenom()	// геттер
+	int getDenom() const	// геттер
 	{
 		return *denominator;
 	}
@@ -64,7 +64,7 @@ public:
 			cout << "Невозможно сократить дробь" << endl << endl;
 	}
 
-	void printDrob()
+	void printDrob() const
 	{
 		cout << "\n Введенная дробь -> " << *numerator << "/" << *denominator << "\n\n";
 	}
@@ -83,7 +83,7 @@ private:
 	int *seconds;
 
 public:
-	Clock(int h = 15, int m = 39, int s = 45)
+	Clock(int h = 15, int m = 39, int s = 45)	// конструктор с параметрами
 	{
 		hours = new int;	minutes = new int;	seconds = new int;
 		/*setHours(h);
