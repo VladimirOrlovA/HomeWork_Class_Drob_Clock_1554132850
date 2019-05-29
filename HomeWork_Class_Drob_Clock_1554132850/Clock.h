@@ -10,7 +10,6 @@ private:
 	int *hours;
 	int *minutes;
 	int *seconds;
-
 public:
 	Clock(int h = 15, int m = 39, int s = 45);	// конструктор с параметрами
 	void setHours();
